@@ -45,20 +45,20 @@ ser.read(ser.inWaiting)
 
 
 
-##### Write To Serial Port:
+##### Write To Serial Port: (update it)
 ```python
 import serial
+import time
 
 ser = serial.Serial(port='/dev/ttyUSB0', baudrate=9600, bytesize=EIGHTBITS)  # open serial port
 print(ser.name)         # check which port was really used
 ser.write(b'hello')     # write a string
+time.sleep(0.1)
 ser.close()             # close port
 ```
 #### CPP:
 
+##### Open, Read and Write to a Serial Port:
 
-##### Read From Serial Port:
-
-
-##### Write To Serial Port:
+The entire cpp code to open, read and write into a serial port is updated in serial_cpp which is inside serial_and_IO folder.()
 
