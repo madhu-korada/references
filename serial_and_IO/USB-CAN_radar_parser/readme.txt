@@ -1,4 +1,4 @@
-This code is used for radar with USB-CAN interface.
+This code was used for radar with USB-CAN interface.
 
 The interface can be established over slcan as given below. 
 
