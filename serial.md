@@ -1,4 +1,4 @@
-#### Basic Commands
+#### BASIC COMMANDS:
 
 Listing all the ports :- ``` $ python -m serial.tools.list_ports ```
 
@@ -33,7 +33,7 @@ ser.close()
 ```pyhton
 data = ser.read(size=5)
 ```
-######to read the data from serial device while something is being written over it.
+###### to read the data from serial device while something is being written over it.
 ```python
 #for python2.7
 data = ser.read(ser.inWaiting())
@@ -45,8 +45,8 @@ ser.read(ser.inWaiting)
 
 
 
-##### WRITE TO SERIAL PORT:
-```
+##### Write To Serial Port:
+```python
 import serial
 
 ser = serial.Serial(port='/dev/ttyUSB0', baudrate=9600, bytesize=EIGHTBITS)  # open serial port
@@ -54,11 +54,11 @@ print(ser.name)         # check which port was really used
 ser.write(b'hello')     # write a string
 ser.close()             # close port
 ```
-CPP:
+#### CPP:
 
 
----- READ FROM SERIAL PORT:
+##### Read From Serial Port:
 
 
----- WRITE TO SERIAL PORT:
+##### Write To Serial Port:
 
