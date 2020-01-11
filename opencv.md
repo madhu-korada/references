@@ -1,8 +1,8 @@
 Things to remember always 
 
-Always reads as BGR.
+--> Always reads as BGR.
 
-rows are (x or y)??
+--> rows are (x or y)??
 cols
 
 while looping through pixels use (rows or cols) first
