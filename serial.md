@@ -1,10 +1,12 @@
-> Listing all the ports ``` $ python -m serial.tools.list_ports ```
+#### Basic Commands
 
-> Accessing ports ``` $ python -m serial.tools.miniterm <port_name> ```
+Listing all the ports :- ``` $ python -m serial.tools.list_ports ```
 
-PYTHON:
+Accessing ports :- ``` $ python -m serial.tools.miniterm <port_name> ```
 
---> READ FROM SERIAL PORT:
+#### PYTHON:
+
+###### READ FROM SERIAL PORT:
 ```
 import serial
 
