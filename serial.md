@@ -6,8 +6,8 @@ Accessing ports :- ``` $ python -m serial.tools.miniterm <port_name> ```
 
 #### PYTHON:
 
-###### READ FROM SERIAL PORT:
-```
+##### Read From Serial Port:
+```python
 import serial
 
 ser = serial.Serial(
@@ -28,15 +28,13 @@ while True:
     print(reading)
 
 ser.close()
-
 ```
-  --> to read given number of bytes from the serial device
-```
+###### to read given number of bytes from the serial device
+```pyhton
 data = ser.read(size=5)
 ```
-
-  --> to read the data from serial device while something is being written over it.
-```
+######to read the data from serial device while something is being written over it.
+```python
 #for python2.7
 data = ser.read(ser.inWaiting())
 
@@ -47,7 +45,7 @@ ser.read(ser.inWaiting)
 
 
 
---> WRITE TO SERIAL PORT:
+##### WRITE TO SERIAL PORT:
 ```
 import serial
 
