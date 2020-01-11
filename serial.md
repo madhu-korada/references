@@ -60,5 +60,6 @@ ser.close()             # close port
 
 ##### Open, Read and Write to a Serial Port:
 
-The entire cpp code to open, read and write into a serial port is updated in serial_cpp which is inside serial_and_IO folder.()
+
+The entire cpp code to open, read and write into a serial port is updated in serial_cpp which is inside serial_and_IO folder. check it out [here](https://github.com/madhu-korada/references/tree/master/serial_and_IO/serial_cpp)
 
