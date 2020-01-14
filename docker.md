@@ -16,9 +16,9 @@
 
 ``` $ docker run -it -d --gpus all -v "home/madhu/folder:/folder" --name madhu <image name> ```
 
-###### With Display
+###### With Display and Port 
 
-``` $ docker run -it -d --gpus all --net=host --env="DISPLAY" -v="$HOME/.Xauthority:/root/.Xauthority:rw" -v "/home/madhu/:/madhu" --name madhu <image name> ```
+``` $ docker run -it -d --gpus all -p 8080:8080 --net=host --env="DISPLAY" -v="$HOME/.Xauthority:/root/.Xauthority:rw" -v "/home/madhu/:/madhu" --name madhu <image name> ```
 
 ##### Access the running container
 

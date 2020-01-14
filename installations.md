@@ -1,55 +1,55 @@
 
-Anaconda:
+### Anaconda:
 
---> prevent Conda from activating the base environment by default
+* prevent Conda from activating the base environment by default
 	
-	$ conda config --set auto_activate_base false
+	```$ conda config --set auto_activate_base false```
 
-Tensorflow:
+### Tensorflow:
 
---> if cuda is latest and the tensorflow is built with previous cuda version, then install cudatoolkit locally in conda
+* if cuda is latest and the tensorflow is built with previous cuda version, then install cudatoolkit locally in conda
 		
-	$ conda install cudatoolkit        (we can use cudatoolkit=x.y also)
-	$ conda install cudnn 
+	```$ conda install cudatoolkit        (we can use cudatoolkit=x.y also)```
+	```$ conda install cudnn ```
 
     or try this also 
 	
-	$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
+	```$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64```
       
 	
---> Numpy version < 1.17 for tensorflow 1.14
+* Numpy version < 1.17 for tensorflow 1.14
 	
-	$ pip install numpy==1.16
+	```$ pip install numpy==1.16```
 
-TensorRT:
+### TensorRT:
 
-Two ways - using debfile, using zip file
+##### Two ways - using debfile, using zip file
 
---> Download the tar file from nvidia website
---> Using zip file, installation has been done in server. 
+* Download the tar file from nvidia website
+* Using zip file, installation has been done in server. 
 
-	$ tar xzvf <zip_file_name>
+	```$ tar xzvf <zip_file_name>```
 
-	$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<eg:/home/TensorRT-3.0.4/lib>
+	```$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<eg:/home/TensorRT-3.0.4/lib>```
 
-	$ cd TensorRT-3.0.4/python
+	```$ cd TensorRT-3.0.4/python```
 
-	$ sudo pip2 install tensorrt-3.0.4-cp27-cp27mu-linux_x86_64.whl
+	```$ sudo pip2 install tensorrt-3.0.4-cp27-cp27mu-linux_x86_64.whl```
 
     if that throws error use, 
 
-	$ sudo env PATH=$PATH pip install tensorrt-3.0.4-cp27-cp27mu-linux_x86_64.whl
+	```$ sudo env PATH=$PATH pip install tensorrt-3.0.4-cp27-cp27mu-linux_x86_64.whl```
 			
-	$ which tensorrt
+	```$ which tensorrt```
 
     (optional) validate tensorrt installation using 
 
-	$ cd TensorRT-3.0.4/uff
+	```$ cd TensorRT-3.0.4/uff```
 
-	$ sudo pip2 install uff-0.2.0-py2.py3-none-any.whl
+	```$ sudo pip2 install uff-0.2.0-py2.py3-none-any.whl```
 
     (optional) validate uff installation using 
-	$ which convert-to-uff
+	```$ which convert-to-uff```
  
  Use "/home/TensorRT-3.0.4/lib" in target link libraries and "/home/TensorRT-3.0.4/include" in include directory in CMakelists.
  if the directory of installation is inside a certain user, copy the TensorRT folder to usr/local/ 

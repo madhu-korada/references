@@ -85,8 +85,12 @@ write image :
 
 read the image : 
 
+#### Read video and extract frames cpp
 
+Check out the readSpeedExtractFrames.cpp file [here](https://github.com/madhu-korada/references/tree/master/opencv_files)
 
+#### Compile with opencv and c++11:
+```$ g++ -std=c++11 name.cpp `pkg-config --libs opencv` ```
 
 
 
