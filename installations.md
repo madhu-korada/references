@@ -32,6 +32,8 @@
 
 	```$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<eg:/home/TensorRT-3.0.4/lib>```
 
+	* Optional 
+	
 	```$ cd TensorRT-3.0.4/python```
 
 	```$ sudo pip2 install tensorrt-3.0.4-cp27-cp27mu-linux_x86_64.whl```

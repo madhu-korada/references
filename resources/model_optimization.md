@@ -3,3 +3,5 @@
 * Channel Pruning
 
 * Quantization
+
+* Data free quantization
