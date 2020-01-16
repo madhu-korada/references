@@ -56,5 +56,9 @@
  Use "/home/TensorRT-3.0.4/lib" in target link libraries and "/home/TensorRT-3.0.4/include" in include directory in CMakelists.
  if the directory of installation is inside a certain user, copy the TensorRT folder to usr/local/ 
 
+### VS Code:
 
+* With Snap:- ```sudo snap install --classic code```
+
+* To use cmake:- Install cmake and cmake-tools from vs code extensions.
 
