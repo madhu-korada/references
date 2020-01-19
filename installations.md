@@ -62,3 +62,18 @@
 
 * To use cmake:- Install cmake and cmake-tools from vs code extensions.
 
+### Forticlient sslvpn
+	
+Download the deb file for 32 or 64 bit from this [site](https://hadler.me/linux/forticlient-sslvpn-deb-packages/)
+
+   Install it using dpkg
+   ```$ dpkg -i name_of_the_debfile.deb``` 
+
+   If it asks to install any dependency, do
+   ```$ sudo apt-get install <dependency>```
+
+   Go to the opt folder where it is installed
+   ```$ cd /opt/forticlient-sslvpn```
+
+   run the below script to use it.
+   ```$ ./fortisslvpn.sh```
