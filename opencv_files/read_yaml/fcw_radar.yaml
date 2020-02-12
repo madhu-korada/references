@@ -1,0 +1,5 @@
+%YAML:1.0
+Parameters:
+   y_axis_threshold: 50
+   x_axis_threshold: 5
+   ttc_threshold: 2
