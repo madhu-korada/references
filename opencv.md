@@ -3,11 +3,20 @@ Things to remember always
 --> Always reads as BGR.
 
 --> rows are (x or y)??
-cols
+OpenCV, like may other libraries, treat matrices (and images) in row-major order. That means every access is defined as (row, column). Note that if you're working with x and y coordinates of an image, this becomes (y, x), if y is your vertical axis.
+
+Notable exceptions from this general rule are Matlab and Eigen libraries.
+
 
 while looping through pixels use (rows or cols) first
 
 
+#### size of img cpp
+rows :- img.rows , cols:- img.cols (returns as int)
+size :- img.size() (returns as cv::Size format)
+
+#### python
+height, width, channels = img.shape 
 
 PYTHON:
 
@@ -57,6 +66,8 @@ read the video :
 write image :
 
 read the image : cv2.imread('image_location')
+
+clone the image : 
 
 ### IMSHOW
 
@@ -113,6 +124,8 @@ write image :
 
 read the image : 
 
+clone the image : cv::Mat cloned = img.clone();
+
 #### Read video and extract frames cpp
 
 Check out the readSpeedExtractFrames.cpp file [here](https://github.com/madhu-korada/references/tree/master/opencv_files)
@@ -128,5 +141,36 @@ CMAKE example:
 
 
 XML and YAML read and writing:
+source: <https://docs.opencv.org/master/dd/d74/tutorial_file_input_output_with_xml_yml.html>
+few things to remember using YAML in opencv
+>> Always make sure the first line is ```%YAML:1.0```
+>> you can write any numpy based data to yaml using this FileStorage module
+>> 
+
+
+Write data to YAML file
+```python
+yaml_path = "/home/sample_yaml.yaml"
+yaml_file = cv2.FileStorage(yaml_path, cv2.FileStorage_WRITE)
+yaml_file.write("Data", data)
+    
+```
+Read data from YAML file
+```python
+yaml_path = "/home/sample_yaml.yaml"
+fs = cv2.FileStorage(yaml_path, cv2.FILE_STORAGE_READ)
+K = fs.getNode("Camera matrix")
+K = K.mat()
+```
+
+Write data to YAML file
+```cpp
+
+```
+
+Read data from YAML file
+```cpp
+
+```
 
 

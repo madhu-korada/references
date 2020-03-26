@@ -17,3 +17,13 @@
 * ImportError: libGL.so.1: cannot open shared object file: No such file or directory
 
 	```$ sudo apt install libgl1-mesa-glx```
+
+
+
+### jekyll
+
+in `require': cannot load such file -- jekyll-twitter-plugin (LoadError)
+
+	gem install jekyll-twitter-plugin will solve the problem
+
+
