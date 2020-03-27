@@ -10,16 +10,26 @@ default_lang:        'en'
 
 # About/contact
 author:
-  name:              Zeming Lin
-  url:               https://twitter.com/ebetica
+  name:              Madhu Korada
+  url:               https://twitter.com/manoj_korada
 github:
-  repo:              https://github.com/ebetica/jekyllbook/
+  repo:              https://github.com/madhu-korada/
 
 # Custom vars
 version:             1.0.0
 
 src:                 "."
 default_theme:       "ayu"
+
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "withmacros"
+
+# For Maths
+markdown:            kramdown
 
 # To use hljs, disable the default highlighter
 kramdown:
@@ -31,19 +41,37 @@ exclude:
 
 # Chapter Configuration (up to a 2 level nested list)
 
+# prologues:
+#   - path: chapters/prologue.md
+#     sections:
+#       - path: chapters/prologue2.md
+# chapters:
+#   - path: chapters/01.md
+#     sections:
+#       - path: chapters/01-1.md
+#       - path: chapters/01-2.md
+#   - path: chapters/02.md
+# epilogues:
+#   - path: chapters/epilogue.md
+
+
+################################### English ####################################
 prologues:
   - path: chapters/prologue.md
-    sections:
-      - path: chapters/prologue2.md
 chapters:
   - path: chapters/01.md
     sections:
-      - path: chapters/01-1.md
+      - path: chapters/boost.md
+      - path: chapters/01-2.md
       - path: chapters/01-2.md
   - path: chapters/02.md
-epilogues:
-  - path: chapters/epilogue.md
+    sections:
+      - path: chapters/01-1.md
+      - path: chapters/01-2.md
+      - path: chapters/01-2.md
 
+#epilogues:
+#  - path: chapters/end.md
 
 # If you want to support multiple languages
 zh:
@@ -56,3 +84,87 @@ zh:
         - path: zh/01-2.md
     - path: zh/02.md
 
+# ################################### English ####################################
+# prologues:
+#   - path: en/about.md
+# chapters:
+#   - path: en/week01/01.md
+#     sections:
+#       - path: en/week01/01-1.md
+#       - path: en/week01/01-2.md
+#       - path: en/week01/01-3.md
+#   - path: en/week02/02.md
+#     sections:
+#       - path: en/week02/02-1.md
+#       - path: en/week02/02-2.md
+#       - path: en/week02/02-3.md
+#   - path: en/week03/03.md
+#     sections:
+#       - path: en/week03/03-1.md
+#       - path: en/week03/03-2.md
+#       - path: en/week03/03-3.md
+#   - path: en/week04/04.md
+#     sections:
+#       - path: en/week04/04-1.md
+#   - path: en/week05/05.md
+#     sections:
+#       - path: en/week05/05-1.md
+#       - path: en/week05/05-2.md
+#       - path: en/week05/05-3.md
+#   - path: en/week06/06.md
+#     sections:
+#       - path: en/week06/06-1.md
+#       - path: en/week06/06-2.md
+#       - path: en/week06/06-3.md
+#   - path: en/week07/07.md
+#     sections:
+#       - path: en/week07/07-1.md
+#       - path: en/week07/07-2.md
+#       - path: en/week07/07-3.md
+# #epilogues:
+# #  - path: chapters/end.md
+
+# ################################### Mandarin ###################################
+# zh:
+#   title:   '深度学习'
+#   tagline: 'Gotta learn them all in 中文'
+#   prologues:
+#     - path: zh/about.md
+#   chapters:
+#     - path: zh/week01/01.md
+#       sections:
+#         - path: zh/week01/01-1.md
+#         - path: zh/week01/01-2.md
+#         - path: zh/week01/01-3.md
+#     - path: zh/week02/02.md
+#       sections:
+#         - path: zh/week02/02-1.md
+#         - path: zh/week02/02-2.md
+#         - path: zh/week02/02-3.md
+#     - path: zh/week03/03.md
+#       sections:
+#         - path: zh/week03/03-1.md
+#         - path: zh/week03/03-2.md
+#         - path: zh/week03/03-3.md
+#     - path: zh/week04/04.md
+#       sections:
+#         - path: zh/week04/04-1.md
+
+# #################################### Korean ####################################
+# ko:
+#   title:   '딥러닝'
+#   tagline: 'Gotta learn them all in 한글'
+#   chapters:
+#     - path: ko/week01/01.md
+#       sections:
+#         - path: ko/week01/01-1.md
+#     - path: ko/week02/02.md
+
+# ################################### Spanish ####################################
+# es:
+#   title:   'Aprendizaje Profundo'
+#   tagline: 'Gotta learn them all en Español'
+#   chapters:
+#     - path: es/week01/01.md
+#       sections:
+#         - path: es/week01/01-1.md

@@ -1,0 +1,23 @@
+I"�<p>Here’s chapter 1 (translated to Chinese)!</p>
+
+<p>Here is some math: $\mathcal{G} e^ix = \sin(x) + i \cos(x)$</p>
+
+<p>Euler’s identity $e^{i\pi}+1=0$ is a beautiful formula in $\mathbb{2}$.</p>
+
+<p>Here’s a more complicated formula:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+a_{n+1} &= \frac{x_{n+1} + nc_n}{n+1} \\
+\iff a_{n+1} &= a_n + \frac{x_{n+1} - a_n}{n+1}
+\end{aligned} %]]></script>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">fun</span><span class="p">():</span>
+    <span class="n">here</span> <span class="o">=</span> <span class="s">"is some code"</span>
+    <span class="n">fun</span><span class="p">()</span>
+
+<span class="c1"># please don't run this code
+</span></code></pre></div></div>
+:ET

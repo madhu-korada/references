@@ -1,10 +1,10 @@
 ---
 layout: default
-title: JekyllBook
+title: References
 lang-ref: home
 ---
 
-JekyllBook is a Jekyll theme based on the awesome theme of the Rust book built by [mdbook](https://github.com/rust-lang/mdBook).
+<!-- JekyllBook is a Jekyll theme based on the awesome theme of the Rust book built by [mdbook](https://github.com/rust-lang/mdBook).
 If you're reading the README.md on Github, [click here](https://ebetica.github.io/jekyllbook/) to visit the rendered version.
 
 ![]({{ site.baseurl }}/static/preview.png)
@@ -60,3 +60,4 @@ $$
 Open sourced under the [MIT license](LICENSE.md).
 
 <3
+ -->

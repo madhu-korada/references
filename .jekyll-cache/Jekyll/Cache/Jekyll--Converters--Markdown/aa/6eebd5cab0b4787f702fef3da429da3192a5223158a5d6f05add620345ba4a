@@ -1,0 +1,52 @@
+I"ù<p>JekyllBook is a Jekyll theme based on the awesome theme of the Rust book built by <a href="https://github.com/rust-lang/mdBook">mdbook</a>.
+If youâ€™re reading the README.md on Github, <a href="https://ebetica.github.io/jekyllbook/">click here</a> to visit the rendered version.</p>
+
+<p><img src="/static/preview.png" alt="" /></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>JekyllBook is built on top of jekyll. Simply run</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll
+</code></pre></div></div>
+<p>to install jekyll, and serve it in the root directory of this repository with</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll -s --trace --baseurl ''
+</code></pre></div></div>
+
+<p>The table of contents / sidebar is located in the <code class="highlighter-rouge">_config.yml</code>.
+Simply set up your config in this format:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chapters:
+  - path: chapters/01.md
+    sections:
+      - path: chapters/01-1.md
+      - path: chapters/01-2.md
+  - path: chapters/02.md
+</code></pre></div></div>
+
+<p>Then, each of your chapters / sections should be prefaced with the Jekyll header:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+title: Name Of Chapter
+---
+</code></pre></div></div>
+
+<p><a href="https://katex.org/">Katex</a> is supported out of the box, so you can write equations easily with</p>
+
+<script type="math/tex; mode=display">\begin{aligned}
+i \hbar \frac{\partial}{\partial t}\Psi(\mathbf{r},t) = \hat H \Psi(\mathbf{r},t)
+\end{aligned}</script>
+
+<h2 id="author">Author</h2>
+
+<p><strong>Zeming Lin</strong></p>
+<ul>
+  <li><a href="https://github.com/ebetica">https://github.com/ebetica</a></li>
+  <li><a href="https://twitter.com/ebetica">https://twitter.com/ebetica</a></li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>Open sourced under the <a href="LICENSE.md">MIT license</a>.</p>
+
+<p>&lt;3</p>
+:ET

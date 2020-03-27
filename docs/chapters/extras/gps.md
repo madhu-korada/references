@@ -1,0 +1,2 @@
+### Resource for gps module 
+<http://www.toptechboy.com/arduino/lesson-24-understanding-gps-nmea-sentences/>
