@@ -1,3 +1,8 @@
+---
+layout: default
+title: VSCode
+lang-ref: chapter1.0
+---
 TO USE JUPYTER NOTEBOOK
 
 Install Python and IntelliCode Extension in Visual Studio and restart.

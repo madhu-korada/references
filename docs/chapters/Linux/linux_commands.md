@@ -1,3 +1,8 @@
+---
+layout: default
+title: Linux Commands
+lang-ref: chapter1.0
+---
 ### Save colored terminal output
 
 #### AHA

@@ -1,0 +1,78 @@
+I"Ã<h3 id="docker-basic-commands">Docker Basic Commands</h3>
+
+<h5 id="show-all-the-containers-running-and-exited">Show all the containers (running and exited)</h5>
+
+<p><code>$ docker ps -a</code></p>
+
+<h5 id="show-all-the-running-containers">Show all the running containers</h5>
+
+<p><code>$ docker ps</code></p>
+
+<h5 id="create-a-container-from-an-image">Create a container from an image</h5>
+
+<p><code>$ docker run -it -d &lt;image name&gt;</code></p>
+
+<h6 id="with-volumes-and-gpus">With volumes and gpus</h6>
+
+<p><code>$ docker run -it -d --gpus all -v "home/madhu/folder:/folder" --name madhu &lt;image name&gt;</code></p>
+
+<h6 id="with-display-and-port">With Display and Port</h6>
+
+<p><code>$ docker run -it -d --gpus all -p 8080:8080 --net=host --env="DISPLAY" -v="$HOME/.Xauthority:/root/.Xauthority:rw" -v "/home/madhu/:/madhu" --name madhu &lt;image name&gt;</code></p>
+
+<h5 id="access-the-running-container">Access the running container</h5>
+
+<p><code>$ docker exec -it &lt;container id&gt; bash</code></p>
+
+<h5 id="stop-a-running-container">Stop a running container</h5>
+
+<p><code>$ docker stop &lt;container id&gt;</code></p>
+
+<h5 id="kill-the-container-by-stopping-its-execution-immediately">Kill the container by stopping its execution immediately</h5>
+
+<p><code>$ docker kill &lt;container id&gt;</code></p>
+
+<h5 id="create-a-new-image-of-an-edited-container-on-the-local-system">Create a new image of an edited container on the local system</h5>
+
+<p><code>$ docker commit &lt;conatainer id&gt; &lt;username/imagename&gt;</code></p>
+
+<h5 id="give-author-name-and-message">Give author name and message</h5>
+
+<p><code>$ docker commit -a "Madhu Korada" -m "put message here" &lt;conatainer id&gt; &lt;username/imagename&gt;</code></p>
+
+<h5 id="login-to-the-docker-hub-repository">Login to the docker hub repository</h5>
+
+<p><code>$ docker login</code></p>
+
+<h5 id="push-an-image-to-the-docker-hub-repository">Push an image to the docker hub repository</h5>
+
+<p><code>$ docker push &lt;username/image name&gt;</code></p>
+
+<h5 id="show-all-the-images">Show all the images</h5>
+
+<p><code>$ docker images</code></p>
+
+<h5 id="delete-a-stopped-container">Delete a stopped container</h5>
+
+<p><code>$ docker rm &lt;container id&gt;</code></p>
+
+<h5 id="delete-an-image-from-local-storage">Delete an image from local storage</h5>
+
+<p><code>$ docker rmi &lt;image-id&gt;</code></p>
+
+<h5 id="build-an-image-from-a-specified-docker-file">Build an image from a specified docker file</h5>
+
+<p><code>$ docker build &lt;path to docker file&gt;</code></p>
+
+<h5 id="export-the-image-into-a-tar-file">Export the image into a tar file</h5>
+
+<p><code>$ docker save -o madhu_deep_learning_image.tar &lt;image-id&gt;</code></p>
+
+<h5 id="load-the-tar-file-into-other-machine">Load the tar file into other machine</h5>
+
+<p><code>$ docker load -i &lt;path to image tar file&gt;</code></p>
+
+<h5 id="change-docker-image-name">Change docker image name</h5>
+
+<p><code>$ docker tag old_name:docker_tag new_name:docker_tag </code></p>
+:ET

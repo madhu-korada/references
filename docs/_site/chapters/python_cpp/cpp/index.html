@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+      <meta charset="UTF-8">
+        <title>
+          
+            C++ &middot; JekyllBook
+          
+        </title>
+
+      <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+      <!--<meta name="description" content="">-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#ffffff" />
+
+      <link rel="shortcut icon" href="/references/static/favicon.ico">
+      <link rel="stylesheet" href="/references/static/css/variables.css">
+      <link rel="stylesheet" href="/references/static/css/general.css">
+      <link rel="stylesheet" href="/references/static/css/chrome.css">
+      <link rel="stylesheet" href="/references/static/css/print.css" media="print">
+
+      <!-- Fonts -->
+      <link rel="stylesheet" href="/references/static/FontAwesome/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+      <!-- Highlight.js Stylesheets -->
+      <link rel="stylesheet" href="/references/static/highlight.css">
+      <link rel="stylesheet" href="/references/static/tomorrow-night.css">
+      <link rel="stylesheet" href="/references/static/ayu-highlight.css">
+	  
+	  <!-- Katex -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous" onload="render_katex()"></script>
+
+      <!-- To automatically render math in text elements, include the auto-render extension: -->
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false}
+          ]});"></script>
+    </head>
+
+  <body class="ayu">
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var default_theme = "ayu";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        document.body.className = theme;
+        document.querySelector('html').className = theme + ' js';
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents" aria-hidden="false">
+        <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+
+            
+
+            <ol class="chapter">
+            <!-- "/chapters/python_cpp/cpp/" vs "/references/" -->
+            
+                <li><a href="/references/">Home</a></li>
+            
+
+            
+            
+            
+            
+            
+
+            
+              
+              
+              
+              
+              <li class="expanded "><a class="" href="/references/chapters/prologue/">
+                About
+              </a></li>
+              
+            
+
+            
+              
+              
+              
+              
+              
+              <li class="expanded "><a class="" href="/references/chapters/python_cpp/title_python_cpp_folder/">
+                  <strong aria-hidden="true">1.</strong> Python and C++
+              </a></li>
+              
+              	<li><ol class="section">
+                
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/boost/">
+                      <strong aria-hidden="true">1.1.</strong> Boost
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="active" href="/references/chapters/python_cpp/cpp/">
+                      <strong aria-hidden="true">1.2.</strong> C++
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/cuda/">
+                      <strong aria-hidden="true">1.3.</strong> Cuda
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/data_manipulation/">
+                      <strong aria-hidden="true">1.4.</strong> Data_manipulation
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/keras/">
+                      <strong aria-hidden="true">1.5.</strong> Keras
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/numpy/">
+                      <strong aria-hidden="true">1.6.</strong> Numpy
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/opencv/">
+                      <strong aria-hidden="true">1.7.</strong> OpenCV
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/python/">
+                      <strong aria-hidden="true">1.8.</strong> Python
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/ros/">
+                      <strong aria-hidden="true">1.9.</strong> ROS
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/serial/">
+                      <strong aria-hidden="true">1.10.</strong> Serial
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/tensorflow/">
+                      <strong aria-hidden="true">1.11.</strong> Tensorflow
+                  </a></li>
+                  
+              	</ol></li>
+              
+            
+              
+              
+              
+              
+              
+              <li class="expanded "><a class="" href="/references/chapters/Linux/title_linux_folder/">
+                  <strong aria-hidden="true">2.</strong> Linux
+              </a></li>
+              
+              	<li><ol class="section">
+                
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/cmake/">
+                      <strong aria-hidden="true">2.1.</strong> CMake
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/docker/">
+                      <strong aria-hidden="true">2.2.</strong> Docker
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/ffmpeg/">
+                      <strong aria-hidden="true">2.3.</strong> Ffmpeg
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/git/">
+                      <strong aria-hidden="true">2.4.</strong> GIT
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/linux_commands/">
+                      <strong aria-hidden="true">2.5.</strong> Linux Commands
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/tmux/">
+                      <strong aria-hidden="true">2.6.</strong> Tmux
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/vim/">
+                      <strong aria-hidden="true">2.7.</strong> Vim
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/vscode/">
+                      <strong aria-hidden="true">2.8.</strong> VSCode
+                  </a></li>
+                  
+              	</ol></li>
+              
+            
+              
+              
+              
+              
+              
+              <li class="expanded "><a class="" href="/references/chapters/extras/title_extras_folder/">
+                  <strong aria-hidden="true">3.</strong> Extras
+              </a></li>
+              
+              	<li><ol class="section">
+                
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/documentation/">
+                      <strong aria-hidden="true">3.1.</strong> Documentations
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/errors/">
+                      <strong aria-hidden="true">3.2.</strong> Errors
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/gps/">
+                      <strong aria-hidden="true">3.3.</strong> GPS
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/installations/">
+                      <strong aria-hidden="true">3.4.</strong> Installations
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/markdown/">
+                      <strong aria-hidden="true">3.5.</strong> Markdown
+                  </a></li>
+                  
+              	</ol></li>
+              
+            
+
+            
+
+            
+            
+
+            
+
+            
+            
+            
+            
+            
+
+
+            <li><a href="https://github.com/madhu-korada/"><img src="/references/static/GitHub.png" /></a></li>
+            <!-- Here's some debug info: -->
+            <!--current_index: 6-->
+            <!--next_page: chapters/python_cpp/cuda.md -->
+            <!--previous_page: chapters/python_cpp/boost.md -->
+            <!--the page list: ["/references/","/references/","chapters/prologue.md","chapters/python_cpp/title_python_cpp_folder.md","chapters/python_cpp/boost.md","chapters/python_cpp/cpp.md","chapters/python_cpp/cuda.md","chapters/python_cpp/data_manipulation.md","chapters/python_cpp/keras.md","chapters/python_cpp/numpy.md","chapters/python_cpp/opencv.md","chapters/python_cpp/python.md","chapters/python_cpp/ros.md","chapters/python_cpp/serial.md","chapters/python_cpp/tensorflow.md","chapters/Linux/title_linux_folder.md","chapters/Linux/cmake.md","chapters/Linux/docker.md","chapters/Linux/ffmpeg.md","chapters/Linux/git.md","chapters/Linux/linux_commands.md","chapters/Linux/tmux.md","chapters/Linux/vim.md","chapters/Linux/vscode.md","chapters/extras/title_extras_folder.md","chapters/extras/documentation.md","chapters/extras/errors.md","chapters/extras/gps.md","chapters/extras/installations.md","chapters/extras/markdown.md","chapters/extras/markdown.md"] -->
+
+            </ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="page">
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <button id="lang-toggle" class="icon-button" type="button" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
+                            <i class="fa fa-globe"></i>
+                        </button>
+                    </div>
+                    <ul id="theme-list" class="button-popup theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                    </ul>
+
+                    <ul id="lang-list" class="button-popup lang-popup" aria-label="Languages" role="menu">
+                        
+                        
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/01/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/boost/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/boost/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/cmake/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/cpp/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/cuda/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/data_manipulation/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/docker/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/documentation/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/errors/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/ffmpeg/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/git/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/gps/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/installations/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/keras/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/linux_commands/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/markdown/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/numpy/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/opencv/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/python/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/ros/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/serial/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/tensorflow/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/title_extras_folder/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/title_linux_folder/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/title_python_cpp_folder/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/tmux/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/vim/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/vscode/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/zh/01/';" role="menuitem" class="lang-selector lang-is-zh theme"> zh </li>
+                          
+                        
+                    </ul>
+
+                    <h1 class="menu-title">JekyllBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="" title="Git repository" aria-label="Git repository">
+                            <!-- <i id="git-repository-button" class="fa "></i> -->
+                            <i id="git-repository-button"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <div class="page">
+                      <h1 class="page-title">C++</h1>
+                      <ul>
+  <li>
+    <p>absolute :- <code>fabs()</code> or <code>abs()</code></p>
+  </li>
+  <li>
+    <p>rounding :- <code>round(5.0245) = 5</code></p>
+  </li>
+  <li>rounding to ‘n’ decimals :-
+    <pre><code class="language-cpp">float round(float var) 
+{ 
+  // 37.66666 * 100 =3766.66 
+  // 3766.66 + .5 =3767.16    for rounding off value 
+  // then type cast to int so value is 3767 
+  // then divided by 100 so the value converted into 37.67 
+  float value = (int)(var * 100 + .5); 
+  return (float)value / 100; 
+} 
+int main() 
+{ 
+  float var = 37.66666; 
+  cout &lt;&lt; round(var); 
+  return 0; 
+} 
+// output is 37.67
+</code></pre>
+  </li>
+  <li>or
+    <pre><code class="language-cpp">#include &lt;iostream&gt; 
+using namespace std; 
+float round(float var) 
+{ 
+  // we use array of chars to store number as a string. 
+  char str[40];  
+  
+  // Print in string the value of var with two decimal point 
+  sprintf(str, "%.2f", var); 
+  
+  // scan string value in var  
+  sscanf(str, "%f", &amp;var);  
+  
+  return var;  
+} 
+int main() 
+{ 
+  float var = 37.66666; 
+  cout &lt;&lt; round(var); 
+  return 0; 
+} 
+// output is 37.67
+</code></pre>
+  </li>
+</ul>
+
+
+                    </div>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="/references/chapters/python_cpp/boost/" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="/references/chapters/python_cpp/cuda/" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a href="/references/chapters/python_cpp/boost/" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a href="/references/chapters/python_cpp/cuda/" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+        </nav>
+
+    </div>
+
+    <script src="/references/static/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/references/static/highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/references/static/book.js" type="text/javascript" charset="utf-8"></script>
+
+    <script>
+      function render_katex() {
+      $("script[type='math/tex']").replaceWith(function() {
+          var tex = $(this).text();
+          return katex.renderToString(tex, {displayMode: false});
+      });
+
+      $("script[type='math/tex; mode=display']").replaceWith(function() {
+          var tex = $(this).html();
+          return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+      });
+      };
+    </script>
+
+    </body>
+</html>

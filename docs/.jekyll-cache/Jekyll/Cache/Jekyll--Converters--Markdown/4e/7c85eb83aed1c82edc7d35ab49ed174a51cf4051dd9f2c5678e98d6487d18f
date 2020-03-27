@@ -1,0 +1,98 @@
+I"7<h3 id="anaconda">Anaconda:</h3>
+
+<ul>
+  <li>
+    <p>prevent Conda from activating the base environment by default</p>
+
+    <p><code>$ conda config --set auto_activate_base false</code></p>
+  </li>
+</ul>
+
+<h3 id="tensorflow">Tensorflow:</h3>
+
+<ul>
+  <li>
+    <p>if cuda is latest and the tensorflow is built with previous cuda version, then install cudatoolkit locally in conda</p>
+
+    <p><code>$ conda install cudatoolkit        (we can use cudatoolkit=x.y also)</code>
+  <code>$ conda install cudnn</code></p>
+
+    <p>or try this also</p>
+
+    <p><code>$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64</code></p>
+  </li>
+  <li>
+    <p>Numpy version &lt; 1.17 for tensorflow 1.14</p>
+
+    <p><code>$ pip install numpy==1.16</code></p>
+  </li>
+</ul>
+
+<h3 id="tensorrt">TensorRT:</h3>
+
+<h5 id="two-ways---using-debfile-using-zip-file">Two ways - using debfile, using zip file</h5>
+
+<ul>
+  <li>Download the tar file from nvidia website</li>
+  <li>
+    <p>Using zip file, installation has been done in server.</p>
+
+    <p><code>$ tar xzvf &lt;zip_file_name&gt;</code></p>
+
+    <p><code>$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:&lt;eg:/home/TensorRT-3.0.4/lib&gt;</code></p>
+
+    <ul>
+      <li>Optional</li>
+    </ul>
+
+    <p><code>$ cd TensorRT-3.0.4/python</code></p>
+
+    <p><code>$ sudo pip2 install tensorrt-3.0.4-cp27-cp27mu-linux_x86_64.whl</code></p>
+
+    <p>if that throws error use,</p>
+
+    <p><code>$ sudo env PATH=$PATH pip install tensorrt-3.0.4-cp27-cp27mu-linux_x86_64.whl</code></p>
+
+    <p><code>$ which tensorrt</code></p>
+
+    <p>(optional) validate tensorrt installation using</p>
+
+    <p><code>$ cd TensorRT-3.0.4/uff</code></p>
+
+    <p><code>$ sudo pip2 install uff-0.2.0-py2.py3-none-any.whl</code></p>
+
+    <p>(optional) validate uff installation using
+  <code>$ which convert-to-uff</code></p>
+  </li>
+</ul>
+
+<p>Use “/home/TensorRT-3.0.4/lib” in target link libraries and “/home/TensorRT-3.0.4/include” in include directory in CMakelists.
+ if the directory of installation is inside a certain user, copy the TensorRT folder to usr/local/</p>
+
+<h3 id="vs-code">VS Code:</h3>
+
+<ul>
+  <li>
+    <p>With Snap:- <code>sudo snap install --classic code</code></p>
+  </li>
+  <li>
+    <p>To use cmake:- Install cmake and cmake-tools from vs code extensions.</p>
+  </li>
+</ul>
+
+<h3 id="forticlient-sslvpn">Forticlient sslvpn</h3>
+
+<p>Download the deb file for 32 or 64 bit from this <a href="https://hadler.me/linux/forticlient-sslvpn-deb-packages/">site</a></p>
+
+<p>Install it using dpkg
+   <code>$ dpkg -i name_of_the_debfile.deb</code></p>
+
+<p>If it asks to install any dependency, do
+   <code>$ sudo apt-get install &lt;dependency&gt;</code></p>
+
+<p>Go to the opt folder where it is installed
+   <code>$ cd /opt/forticlient-sslvpn</code></p>
+
+<p>run the below script to use it.
+   <code>$ ./fortisslvpn.sh</code></p>
+:ET

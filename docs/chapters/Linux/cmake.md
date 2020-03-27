@@ -1,3 +1,8 @@
+---
+layout: default
+title: CMake
+lang-ref: chapter1.0
+---
 ### Headers 
 ```bash
 Cmake_minimum_required(VERSION 2.8)

@@ -1,0 +1,14 @@
+I"/<h4 id="git-merge">GIT MERGE</h4>
+
+<p>Reference <a href="https://stackoverflow.com/questions/14961255/how-does-git-merge-work-in-details">link</a> for the theory behind git merge.</p>
+
+<p>Consider</p>
+
+<pre><code>$ git checkout feature
+$ git merge master
+
+(or)
+
+$ git merge master feature
+</code></pre>
+:ET

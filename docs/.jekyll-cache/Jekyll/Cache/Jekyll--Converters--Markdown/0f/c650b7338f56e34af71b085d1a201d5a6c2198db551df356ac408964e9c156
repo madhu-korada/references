@@ -1,0 +1,8 @@
+I"�<p>TO USE JUPYTER NOTEBOOK</p>
+
+<p>Install Python and IntelliCode Extension in Visual Studio and restart.</p>
+
+<p>Create New Notebook in VS Code: shortcut CTRL + SHIFT + P (Windows) or Command + SHIFT + P (macOS), and run the “Python: Create Blank New Jupyter Notebook” command.</p>
+
+<p>Open existing Notebook in VS Code: After restarting VS Code IDE, Open Jypyter Notebook file (.ipynb file) from the file menu.</p>
+:ET

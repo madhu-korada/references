@@ -1,0 +1,54 @@
+I"�<ul>
+  <li>
+    <p>absolute :- <code>fabs()</code> or <code>abs()</code></p>
+  </li>
+  <li>
+    <p>rounding :- <code>round(5.0245) = 5</code></p>
+  </li>
+  <li>rounding to ‘n’ decimals :-
+    <pre><code class="language-cpp">float round(float var) 
+{ 
+  // 37.66666 * 100 =3766.66 
+  // 3766.66 + .5 =3767.16    for rounding off value 
+  // then type cast to int so value is 3767 
+  // then divided by 100 so the value converted into 37.67 
+  float value = (int)(var * 100 + .5); 
+  return (float)value / 100; 
+} 
+int main() 
+{ 
+  float var = 37.66666; 
+  cout &lt;&lt; round(var); 
+  return 0; 
+} 
+// output is 37.67
+</code></pre>
+  </li>
+  <li>or
+    <pre><code class="language-cpp">#include &lt;iostream&gt; 
+using namespace std; 
+float round(float var) 
+{ 
+  // we use array of chars to store number as a string. 
+  char str[40];  
+  
+  // Print in string the value of var with two decimal point 
+  sprintf(str, "%.2f", var); 
+  
+  // scan string value in var  
+  sscanf(str, "%f", &amp;var);  
+  
+  return var;  
+} 
+int main() 
+{ 
+  float var = 37.66666; 
+  cout &lt;&lt; round(var); 
+  return 0; 
+} 
+// output is 37.67
+</code></pre>
+  </li>
+</ul>
+
+:ET

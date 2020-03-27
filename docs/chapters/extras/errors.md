@@ -1,3 +1,8 @@
+---
+layout: default
+title: Errors
+lang-ref: chapter1.0
+---
 ## Installation errors
 
 ## Errors in general

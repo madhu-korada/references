@@ -1,3 +1,8 @@
+---
+layout: default
+title: Serial
+lang-ref: chapter1.0
+---
 #### BASIC COMMANDS:
 
 Listing all the ports :- ``` $ python -m serial.tools.list_ports ```

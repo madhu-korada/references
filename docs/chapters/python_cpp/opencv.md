@@ -1,3 +1,8 @@
+---
+layout: default
+title: OpenCV
+lang-ref: chapter1.0
+---
 Things to remember always 
 
 --> Always reads as BGR.

@@ -1,3 +1,9 @@
+---
+layout: default
+title: C++
+lang-ref: chapter1.0
+---
+
 * absolute :- ```fabs()``` or ```abs()```
 
 * rounding :- ```round(5.0245) = 5```

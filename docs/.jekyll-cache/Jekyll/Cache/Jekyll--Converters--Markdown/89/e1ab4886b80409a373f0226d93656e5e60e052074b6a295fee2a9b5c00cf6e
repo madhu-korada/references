@@ -1,0 +1,163 @@
+I"<p>Things to remember always</p>
+
+<p>–&gt; Always reads as BGR.</p>
+
+<p>–&gt; rows are (x or y)??
+OpenCV, like may other libraries, treat matrices (and images) in row-major order. That means every access is defined as (row, column). Note that if you’re working with x and y coordinates of an image, this becomes (y, x), if y is your vertical axis.</p>
+
+<p>Notable exceptions from this general rule are Matlab and Eigen libraries.</p>
+
+<p>while looping through pixels use (rows or cols) first</p>
+
+<h4 id="size-of-img-cpp">size of img cpp</h4>
+<p>rows :- img.rows , cols:- img.cols (returns as int)
+size :- img.size() (returns as cv::Size format)</p>
+
+<h4 id="python">python</h4>
+<p>height, width, channels = img.shape</p>
+
+<p>PYTHON:</p>
+
+<p>creating a copy image :</p>
+
+<p>put text :</p>
+
+<p>draw bounding box :</p>
+
+<p>draw cicle :</p>
+
+<p>draw line :</p>
+
+<p>gaussian_blur:</p>
+
+<p>blurred = cv2.GaussianBlur(image, (11, 11), 0)</p>
+<h1 id="kernel-size--11-11">kernel size = (11, 11)</h1>
+
+<p>flip :</p>
+
+<p>resize :</p>
+
+<p>rotate patricular angle:</p>
+
+<p>rotate (90,-90) :</p>
+
+<p>crop (array slicing) :</p>
+
+<p>bgr to gray :</p>
+
+<p>rgb to luv :</p>
+
+<p>rgb to hsv :</p>
+
+<p>access pixel at (x, y) :</p>
+
+<p>shape : image.shape</p>
+
+<p>waitkey :</p>
+
+<p>show image in window : cv2.imshow(“Image”, image)</p>
+
+<p>write video :</p>
+
+<p>read the video :</p>
+
+<p>write image :</p>
+
+<p>read the image : cv2.imread(‘image_location’)</p>
+
+<p>clone the image :</p>
+
+<h3 id="imshow">IMSHOW</h3>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;opencv2/highgui.hpp&gt;
+// #include &lt;opencv2/imgcodecs.hpp&gt;
+// #include &lt;opencv2/imgproc.hpp&gt;
+
+int main() {
+
+  cv::Mat image;
+  std::string file = "../sample.jpeg";
+  image = cv::imread(file , 1);
+
+  if(! image.data ) {
+      std::cout &lt;&lt;  "Could not open or find the image" &lt;&lt; std::endl ;
+      return -1;
+    }
+
+  cv::namedWindow( "Display window", cv::WINDOW_AUTOSIZE );
+  cv::imshow( "Display window", image );
+
+  cv::waitKey(0);
+  return 0;
+}
+</code></pre>
+
+<p>–&gt; using svm (ml module of opencv)
+	training</p>
+
+<pre><code>inferencing
+</code></pre>
+
+<p>CPP:</p>
+
+<p>resize :</p>
+
+<p>rotate :</p>
+
+<p>crop :</p>
+
+<p>create cv::Mat :</p>
+
+<p>write video :</p>
+
+<p>read the video :</p>
+
+<p>write image :</p>
+
+<p>read the image :</p>
+
+<p>clone the image : cv::Mat cloned = img.clone();</p>
+
+<h4 id="read-video-and-extract-frames-cpp">Read video and extract frames cpp</h4>
+
+<p>Check out the readSpeedExtractFrames.cpp file <a href="https://github.com/madhu-korada/references/tree/master/opencv_files">here</a></p>
+
+<h4 id="compile-with-opencv-and-c11">Compile with opencv and c++11:</h4>
+<p><code>$ g++ -std=c++11 name.cpp `pkg-config --libs opencv`</code></p>
+
+<p>CMAKE example:</p>
+
+<p>XML and YAML read and writing:
+source: <a href="https://docs.opencv.org/master/dd/d74/tutorial_file_input_output_with_xml_yml.html">https://docs.opencv.org/master/dd/d74/tutorial_file_input_output_with_xml_yml.html</a>
+few things to remember using YAML in opencv</p>
+<blockquote>
+  <blockquote>
+    <p>Always make sure the first line is <code>%YAML:1.0</code>
+you can write any numpy based data to yaml using this FileStorage module</p>
+
+  </blockquote>
+</blockquote>
+
+<p>Write data to YAML file</p>
+<pre><code class="language-python">yaml_path = "/home/sample_yaml.yaml"
+yaml_file = cv2.FileStorage(yaml_path, cv2.FileStorage_WRITE)
+yaml_file.write("Data", data)
+    
+</code></pre>
+<p>Read data from YAML file</p>
+<pre><code class="language-python">yaml_path = "/home/sample_yaml.yaml"
+fs = cv2.FileStorage(yaml_path, cv2.FILE_STORAGE_READ)
+K = fs.getNode("Camera matrix")
+K = K.mat()
+</code></pre>
+
+<p>Write data to YAML file</p>
+<pre><code class="language-cpp">
+</code></pre>
+
+<p>Read data from YAML file</p>
+<pre><code class="language-cpp">
+</code></pre>
+
+:ET

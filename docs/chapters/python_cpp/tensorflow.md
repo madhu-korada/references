@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tensorflow
+lang-ref: chapter1.0
+---
 ### TF 2 resource links
 
 * Awesome Tensorflow 2 : Tensorflow 2.x resources such as tutorials, blogs, code and videos. Recommended level:heartheartheartheart!![link](https://github.com/Amin-Tgz/awesome-tensorflow-2)

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Python
+lang-ref: chapter1.0
+---
 #### Glob
 ```python
 import glob

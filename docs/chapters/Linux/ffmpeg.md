@@ -1,3 +1,8 @@
+---
+layout: default
+title: Ffmpeg
+lang-ref: chapter1.0
+---
 Output one image every second:
 
 ffmpeg -i input.mp4 -vf fps=1 out%d.png

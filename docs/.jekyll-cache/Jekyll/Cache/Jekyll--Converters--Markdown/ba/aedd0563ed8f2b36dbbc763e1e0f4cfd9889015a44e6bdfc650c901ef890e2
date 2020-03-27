@@ -1,0 +1,33 @@
+I"<h2 id="installation-errors">Installation errors</h2>
+
+<h2 id="errors-in-general">Errors in general</h2>
+
+<h3 id="keras">Keras:</h3>
+
+<ul>
+  <li>
+    <p>AttributeError: module ‘keras.backend’ has no attribute ‘image_dim_ordering’ 
+  (problem occurs if keras version is &gt; 2.2.4)</p>
+
+    <p><code>$ pip install keras==2.2.4</code></p>
+  </li>
+</ul>
+
+<h3 id="opencv-in-anaconda">OpenCV in anaconda:</h3>
+
+<ul>
+  <li>
+    <p>ImportError: libGL.so.1: cannot open shared object file: No such file or directory</p>
+
+    <p><code>$ sudo apt install libgl1-mesa-glx</code></p>
+  </li>
+</ul>
+
+<h3 id="jekyll">jekyll</h3>
+
+<p>in `require’: cannot load such file – jekyll-twitter-plugin (LoadError)</p>
+
+<pre><code>gem install jekyll-twitter-plugin will solve the problem
+</code></pre>
+
+:ET

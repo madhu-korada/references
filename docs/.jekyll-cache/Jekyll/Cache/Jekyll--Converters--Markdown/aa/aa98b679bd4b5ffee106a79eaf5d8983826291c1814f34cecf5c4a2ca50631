@@ -1,0 +1,7 @@
+I"¹<h4 id="glob">Glob</h4>
+<pre><code class="language-python">import glob
+all_images = glob.glob('images/directory/' + '*.jpg')
+for image in all_images:
+	# do the processing
+</code></pre>
+:ET

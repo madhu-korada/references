@@ -1,0 +1,54 @@
+I"<h3 id="tmux">TMUX</h3>
+
+<h4 id="my-confugaration">MY CONFUGARATION</h4>
+
+<p>Followed this <a href="https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/</a>.</p>
+
+<p>bind key C-a</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>split panes using</td>
+      <td>and - instead of “ and %</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>switch panes using M-<arrow_key> (remember: M is for Meta, which is usually your Alt key)</arrow_key></p>
+
+<h5 id="working-with-tmux-windows">Working with TMUX Windows</h5>
+
+<h6 id="rename-the-current-window---c-b-">Rename the current window :- <code>C-b ,</code></h6>
+
+<h6 id="rename-your-existing-session---tmux-rename-session--t-0-database">Rename your existing session :- <code>tmux rename-session -t 0 database</code></h6>
+
+<h6 id="create-a-new-session-with-the-name-database---tmux-new--s-database">Create a new session with the name “database” :- <code>tmux new -s database</code></h6>
+
+<h6 id="attach-to-tmux-session-0---tmux-attach--t-0-or-to-tmux-session-database---tmux-attach--t-database">Attach to tmux session 0 :- <code>tmux attach -t 0</code> or to tmux session database :- <code>tmux attach -t database</code></h6>
+
+<h6 id="to-detach-your-current-session-use---c-b-d">To detach your current session use :- <code>C-b d</code></h6>
+
+<h6 id="to-have-tmux-give-you-a-choice-which-of-your-sessions-you-want-to-detach---c-b-d">To have tmux give you a choice which of your sessions you want to detach :- <code>C-b D</code></h6>
+
+<h6 id="create-new-window---c-b-c">Create new window :- <code>C-b c</code></h6>
+
+<h6 id="to-switch-to-the-next-window---c-b-n">To switch to the next window :- <code>C-b n</code></h6>
+
+<h6 id="to-switch-to-the-previous-window-according-to-the-order-in-your-status-bar---c-b-p">To switch to the previous window (according to the order in your status bar) :- <code>C-b p</code></h6>
+
+<h5 id="working-with-tmux-panes">Working with TMUX Panes</h5>
+
+<h6 id="start-new-session---tmux">Start new session :- <code>tmux</code></h6>
+
+<h6 id="splitting-panes-into-a-left-and-a-right-pane---c-b--this-means-you-press-ctrl-and-b-followed-by-the--key">Splitting panes into a left and a right pane :- <code>C-b %</code> (This means you press Ctrl and b followed by the % key)</h6>
+
+<h6 id="splitting-panes-into-a-top-and-a-bottom-pane---c-b-">Splitting panes into a top and a bottom pane :- <code>C-b "</code></h6>
+
+<h6 id="navigating-panes---c-b-arrow-key">Navigating panes :- <code>C-b &lt;arrow key&gt;</code></h6>
+
+<h6 id="close-panes---exit-or-hit-ctrl-d">Close panes :- <code>exit</code> or hit <code>Ctrl-d</code></h6>
+
+<h6 id="make-a-pane-go-full-screen-or-back-to-its-previous-size---c-b-z">Make a pane go full screen or back to it’s previous size :- <code>C-b z</code></h6>
+
+:ET

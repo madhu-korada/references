@@ -1,4 +1,8 @@
-
+---
+layout: default
+title: Installations
+lang-ref: chapter1.0
+---
 ### Anaconda:
 
 * prevent Conda from activating the base environment by default

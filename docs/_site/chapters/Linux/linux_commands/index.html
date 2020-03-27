@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+      <meta charset="UTF-8">
+        <title>
+          
+            Linux Commands &middot; JekyllBook
+          
+        </title>
+
+      <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+      <!--<meta name="description" content="">-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#ffffff" />
+
+      <link rel="shortcut icon" href="/references/static/favicon.ico">
+      <link rel="stylesheet" href="/references/static/css/variables.css">
+      <link rel="stylesheet" href="/references/static/css/general.css">
+      <link rel="stylesheet" href="/references/static/css/chrome.css">
+      <link rel="stylesheet" href="/references/static/css/print.css" media="print">
+
+      <!-- Fonts -->
+      <link rel="stylesheet" href="/references/static/FontAwesome/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+      <!-- Highlight.js Stylesheets -->
+      <link rel="stylesheet" href="/references/static/highlight.css">
+      <link rel="stylesheet" href="/references/static/tomorrow-night.css">
+      <link rel="stylesheet" href="/references/static/ayu-highlight.css">
+	  
+	  <!-- Katex -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous" onload="render_katex()"></script>
+
+      <!-- To automatically render math in text elements, include the auto-render extension: -->
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {delimiters: [
+                          {left: '$$', right: '$$', display: true},
+                          {left: '$', right: '$', display: false}
+          ]});"></script>
+    </head>
+
+  <body class="ayu">
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var default_theme = "ayu";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        document.body.className = theme;
+        document.querySelector('html').className = theme + ' js';
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents" aria-hidden="false">
+        <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+
+            
+
+            <ol class="chapter">
+            <!-- "/chapters/Linux/linux_commands/" vs "/references/" -->
+            
+                <li><a href="/references/">Home</a></li>
+            
+
+            
+            
+            
+            
+            
+
+            
+              
+              
+              
+              
+              <li class="expanded "><a class="" href="/references/chapters/prologue/">
+                About
+              </a></li>
+              
+            
+
+            
+              
+              
+              
+              
+              
+              <li class="expanded "><a class="" href="/references/chapters/python_cpp/title_python_cpp_folder/">
+                  <strong aria-hidden="true">1.</strong> Python and C++
+              </a></li>
+              
+              	<li><ol class="section">
+                
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/boost/">
+                      <strong aria-hidden="true">1.1.</strong> Boost
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/cpp/">
+                      <strong aria-hidden="true">1.2.</strong> C++
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/cuda/">
+                      <strong aria-hidden="true">1.3.</strong> Cuda
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/data_manipulation/">
+                      <strong aria-hidden="true">1.4.</strong> Data_manipulation
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/keras/">
+                      <strong aria-hidden="true">1.5.</strong> Keras
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/numpy/">
+                      <strong aria-hidden="true">1.6.</strong> Numpy
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/opencv/">
+                      <strong aria-hidden="true">1.7.</strong> OpenCV
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/python/">
+                      <strong aria-hidden="true">1.8.</strong> Python
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/ros/">
+                      <strong aria-hidden="true">1.9.</strong> ROS
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/serial/">
+                      <strong aria-hidden="true">1.10.</strong> Serial
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/python_cpp/tensorflow/">
+                      <strong aria-hidden="true">1.11.</strong> Tensorflow
+                  </a></li>
+                  
+              	</ol></li>
+              
+            
+              
+              
+              
+              
+              
+              <li class="expanded "><a class="" href="/references/chapters/Linux/title_linux_folder/">
+                  <strong aria-hidden="true">2.</strong> Linux
+              </a></li>
+              
+              	<li><ol class="section">
+                
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/cmake/">
+                      <strong aria-hidden="true">2.1.</strong> CMake
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/docker/">
+                      <strong aria-hidden="true">2.2.</strong> Docker
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/ffmpeg/">
+                      <strong aria-hidden="true">2.3.</strong> Ffmpeg
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/git/">
+                      <strong aria-hidden="true">2.4.</strong> GIT
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="active" href="/references/chapters/Linux/linux_commands/">
+                      <strong aria-hidden="true">2.5.</strong> Linux Commands
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/tmux/">
+                      <strong aria-hidden="true">2.6.</strong> Tmux
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/vim/">
+                      <strong aria-hidden="true">2.7.</strong> Vim
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/Linux/vscode/">
+                      <strong aria-hidden="true">2.8.</strong> VSCode
+                  </a></li>
+                  
+              	</ol></li>
+              
+            
+              
+              
+              
+              
+              
+              <li class="expanded "><a class="" href="/references/chapters/extras/title_extras_folder/">
+                  <strong aria-hidden="true">3.</strong> Extras
+              </a></li>
+              
+              	<li><ol class="section">
+                
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/documentation/">
+                      <strong aria-hidden="true">3.1.</strong> Documentations
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/errors/">
+                      <strong aria-hidden="true">3.2.</strong> Errors
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/gps/">
+                      <strong aria-hidden="true">3.3.</strong> GPS
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/installations/">
+                      <strong aria-hidden="true">3.4.</strong> Installations
+                  </a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="expanded "><a class="" href="/references/chapters/extras/markdown/">
+                      <strong aria-hidden="true">3.5.</strong> Markdown
+                  </a></li>
+                  
+              	</ol></li>
+              
+            
+
+            
+
+            
+            
+
+            
+
+            
+            
+            
+            
+            
+
+
+            <li><a href="https://github.com/madhu-korada/"><img src="/references/static/GitHub.png" /></a></li>
+            <!-- Here's some debug info: -->
+            <!--current_index: 21-->
+            <!--next_page: chapters/Linux/tmux.md -->
+            <!--previous_page: chapters/Linux/git.md -->
+            <!--the page list: ["/references/","/references/","chapters/prologue.md","chapters/python_cpp/title_python_cpp_folder.md","chapters/python_cpp/boost.md","chapters/python_cpp/cpp.md","chapters/python_cpp/cuda.md","chapters/python_cpp/data_manipulation.md","chapters/python_cpp/keras.md","chapters/python_cpp/numpy.md","chapters/python_cpp/opencv.md","chapters/python_cpp/python.md","chapters/python_cpp/ros.md","chapters/python_cpp/serial.md","chapters/python_cpp/tensorflow.md","chapters/Linux/title_linux_folder.md","chapters/Linux/cmake.md","chapters/Linux/docker.md","chapters/Linux/ffmpeg.md","chapters/Linux/git.md","chapters/Linux/linux_commands.md","chapters/Linux/tmux.md","chapters/Linux/vim.md","chapters/Linux/vscode.md","chapters/extras/title_extras_folder.md","chapters/extras/documentation.md","chapters/extras/errors.md","chapters/extras/gps.md","chapters/extras/installations.md","chapters/extras/markdown.md","chapters/extras/markdown.md"] -->
+
+            </ol>
+        </div>
+        <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="page">
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <button id="lang-toggle" class="icon-button" type="button" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
+                            <i class="fa fa-globe"></i>
+                        </button>
+                    </div>
+                    <ul id="theme-list" class="button-popup theme-popup" aria-label="Themes" role="menu">
+                        <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                        <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                    </ul>
+
+                    <ul id="lang-list" class="button-popup lang-popup" aria-label="Languages" role="menu">
+                        
+                        
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/01/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/boost/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/boost/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/cmake/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/cpp/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/cuda/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/data_manipulation/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/docker/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/documentation/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/errors/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/ffmpeg/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/git/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/gps/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/installations/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/keras/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/linux_commands/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/markdown/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/numpy/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/opencv/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/python/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/ros/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/serial/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/tensorflow/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/extras/title_extras_folder/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/title_linux_folder/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/python_cpp/title_python_cpp_folder/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/tmux/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/vim/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/chapters/Linux/vscode/';" role="menuitem" class="lang-selector lang-is-en theme"> en </li>
+                          
+                            
+                            <li role="none"><button onclick="window.location='/references/zh/01/';" role="menuitem" class="lang-selector lang-is-zh theme"> zh </li>
+                          
+                        
+                    </ul>
+
+                    <h1 class="menu-title">JekyllBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="" title="Git repository" aria-label="Git repository">
+                            <!-- <i id="git-repository-button" class="fa "></i> -->
+                            <i id="git-repository-button"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+            <script type="text/javascript">
+                document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                    link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                });
+            </script>
+
+            <div id="content" class="content">
+                <main>
+                    <div class="page">
+                      <h1 class="page-title">Linux Commands</h1>
+                      <h3 id="save-colored-terminal-output">Save colored terminal output</h3>
+
+<h4 id="aha">AHA</h4>
+<p>Install aha i.e. to “converts ANSI escape sequences of a unix terminal to HTML code”</p>
+
+<pre><code class="language-bash">hitech@hitech-Latitude-E5570:~$ sudo apt-get install aha
+</code></pre>
+
+<p>then save your grep (or ls) output like this:</p>
+
+<pre><code class="language-bash">hitech@hitech-Latitude-E5570:~$ ls --color=always | aha --black --title 'ls-with-colors' &gt; ls-with-colors.html
+</code></pre>
+
+<p>options:</p>
+<pre><code class="language-bash">--black param to set background as black color
+--title param to set the title for HTML page
+</code></pre>
+
+<h3 id="nmap">NMAP</h3>
+
+<h6 id="find-all-the-devices-connected-to-the-network---sudo-nmap--sp-19216816">Find all the devices connected to the network :- <code>sudo nmap -sP 192.168.16.*</code></h6>
+
+<h6 id="find-device-connected-to-lan---sudo-nmap--sp-10420124">Find device connected to lan :- <code>sudo nmap -sP 10.42.0.1/24</code></h6>
+
+<h3 id="using-screen-commands">Using screen commands</h3>
+
+<h6 id="create-a-screen----------------screen--s-screen_name">Create a screen              :- <code>screen -S screen_name</code></h6>
+
+<h6 id="open-the-screen----------------screen--r-screen_name">Open the screen              :- <code>screen -r screen_name</code></h6>
+
+<h6 id="list-all-screens---------------screen--ls">List all screens             :- <code>screen -ls</code></h6>
+
+<h6 id="kill-a-screen------------------screen--x--s-25486-kill">Kill a screen                :- <code>screen -X -S 25486 kill</code></h6>
+
+<h6 id="exit-the-screen----------------cntlad">Exit the screen              :- <code>CNTL+A+D</code></h6>
+
+<h6 id="check-the-screen-name-and-id---echo-sty">check the screen name and id :- <code>echo $STY</code></h6>
+
+<h3 id="kill-programms">Kill Programms</h3>
+
+<h6 id="kill-all-ros-stuff-------killall--9-roscore-or-killall--9-rosmaster">kill all ros stuff     :- <code>killall -9 roscore</code> or <code>killall -9 rosmaster</code></h6>
+
+<h3 id="basic-commands">Basic commands</h3>
+
+<h6 id="open-new-terminal---------crtl--alt--t">open new terminal       :- <code>Crtl + Alt + T</code></h6>
+<h6 id="new-window-in-terminal---crtl--shift--t">New window in terminal :- <code>Crtl + shift + T</code></h6>
+<h6 id="close-terminal-----------crtl--shift--w">Close terminal         :- <code>Crtl + shift + W</code></h6>
+<h6 id="switch-bw-terminals-----alt--">switch b/w terminals   :- <code>Alt + ~</code></h6>
+<h6 id="manual-for-the-command---man-command">manual for the command :- <code>man "command"</code></h6>
+<h6 id="file-transfer-protocol---ftp">file transfer protocol :- <code>ftp</code></h6>
+<h6 id="storage-used-by-sys------df">storage used by sys    :- <code>df</code></h6>
+<h6 id="reverse-search-----------cntrl--r">reverse search         :- <code>cntrl + R</code></h6>
+<h6 id="super-user-mode----------sudo-su">super user mode        :- <code>sudo su</code></h6>
+<h6 id="description--------------whatis-command">description            :- <code>whatis "command"</code></h6>
+<h6 id="location-of-command-------whereis-command">location of command     :- <code>whereis "command"</code></h6>
+
+<h3 id="ls---list-directory-contents">ls - list directory contents</h3>
+
+<h6 id="list-files--------------ls">List files            :- <code>ls</code></h6>
+<h6 id="list-hidden-files-------la">List hidden files     :- <code>la</code></h6>
+<h6 id="list-by-date------------ls--ltr">List by date          :- <code>ls -ltr</code></h6>
+<h6 id="list-only-directories---ls--d-">List only directories :- <code>ls -d */</code></h6>
+<h6 id="list-sub-directories----ls--r">List sub-directories  :- <code>ls -R</code></h6>
+<h6 id="info-of-directory-------ls--ld-folder_name">Info of directory     :- <code>ls -ld /folder_name/</code></h6>
+<h6 id="in-reverse-direction----ls--r">In reverse direction  :- <code>ls -r</code></h6>
+
+<h3 id="du---estimate-file-space-usage">du - estimate file space usage</h3>
+
+<h6 id="size-of-a-folder--------du-folder_name">Size of a folder      :- <code>du /folder_name/</code></h6>
+<h6 id="size-of-all-folders-----du--csh-">Size of all folders   :- <code>du -csh *</code></h6>
+
+<h3 id="apt---package-management-system">apt - package management system</h3>
+
+<h6 id="display-all-the-packages-to-be-updated---apt-get-update">display all the packages to be updated :- <code>apt-get update</code></h6>
+<h6 id="update-of-the-package-lists">update of the package lists</h6>
+<h6 id="and-check-for-broken-dependencies--------apt-get-check">and check for broken dependencies      :- <code>apt-get check</code></h6>
+<h6 id="upgrade-the-packages---------------------apt-get-upgrade">upgrade the packages                   :- <code>apt-get upgrade</code></h6>
+<h6 id="smart-upgrade-only-important-packages---apt-get-dist-upgrade">smart-upgrade (only important packages) :- <code>apt-get dist-upgrade</code></h6>
+<h6 id="replace-new-packages-with-old-system-wide--apt-get-full-upgrade">replace new packages with old (system wide):- <code>apt-get full-upgrade</code></h6>
+
+<h3 id="install-programs">Install Programs</h3>
+
+<h6 id="install-a-package------------------------apt-get-install-package_name">install a package                      :- <code>apt-get install &lt;package_name&gt;</code></h6>
+<h6 id="install-a-package--fix-broken-packages--apt-get--f-install-package_name">install a package &amp; Fix Broken Packages:- <code>apt-get -f install &lt;package_name&gt;</code></h6>
+<h6 id="download-but-not-install-----------------apt-get-download-package_name">download but not install               :- <code>apt-get download &lt;package_name&gt;</code></h6>
+
+<h3 id="remove-programs">Remove Programs</h3>
+
+<h6 id="remove-a-package-----------apt-get-remove-package_name">remove a package		       :- <code>apt-get remove &lt;package_name&gt;</code></h6>
+<h6 id="completely-remove-traces-of-package------apt-get-purge-package_name">completely remove traces of package    :- <code>apt-get purge &lt;package_name&gt;</code></h6>
+<h6 id="removes-packages-that-were-installed-by-other-packages-and-are-no-longer-needed--apt-get-autormove">removes packages that were installed by other packages and are no longer needed:- <code>apt-get autormove</code></h6>
+<h6 id="removes-an-installed-package-and-dependencies---apt-get-autormove">removes an installed package and dependencies :- <code>apt-get autormove</code></h6>
+<h6 id="remove-deb-files-for-packages-that-are-no-longer-installed-in-system--------apt-get-autoclean">remove .deb files for packages that are no longer installed in system      :- <code>apt-get autoclean</code></h6>
+<h6 id="the-same-as-above-except-it-removes-all-packages-from-the-package-cache------apt-get-clean">The same as above, except it removes all packages from the package cache    :- <code>apt-get clean</code></h6>
+
+<h3 id="search-commands">Search Commands</h3>
+
+<h6 id="lists-the-searched-packages--------------apt-cache-search-search_term">lists the searched packages            :- <code>apt-cache search &lt;search_term&gt;</code></h6>
+<h6 id="same-as-above-by-marking-it-with-ii-installed-and-un-not-installed----dpkg--l-search_term">same as above by marking it with ii (installed) and un (not installed)  :- <code>dpkg -l *&lt;search_term&gt;*</code></h6>
+<h6 id="description-of-package-and-other-information-including-version-size-dependencies-and-conflicts--------------apt-cache-show-package_name-or-dpkg---print-avail-package_name">description of package and other information including version, size, dependencies and conflicts.            :- <code>apt-cache show &lt;package_name&gt; (or) dpkg --print-avail &lt;package_name&gt;</code></h6>
+<h6 id="similar-to-laocate-----------------------delocate-package_name">similar to laocate                     :- <code>delocate &lt;package_name&gt;</code></h6>
+<h6 id="list-all-packages-installed--------------apt-cache-pkgnames">list all packages installed            :- <code>apt-cache pkgnames</code></h6>
+
+<h3 id="find---search-for-files-in-a-directory-hierarchy">find - search for files in a directory hierarchy</h3>
+
+<h6 id="locating-files-by-name-------------------find-home--name-filename-use--iname-for-case-insensitive">locating files by name                 :- <code>find $HOME -name 'file.name' (use "-iname" for case-insensitive)</code></h6>
+<h6 id="loacting-files-of-same-extension---------find-home--name-name">loacting files of same extension       :- <code>find $HOME -name '*.name'</code></h6>
+<h6 id="searches-everywhere-slow-process-------sudo-find---iname-ogg">searches everywhere (slow process)     :- <code>sudo find / -iname '*.ogg'</code></h6>
+<h6 id="locate-by-size--represents-larger-----find-home--iname-ogg--size-100m">locate by size (+ represents larger)   :- <code>find $HOME -iname '*.ogg' -size +100M</code></h6>
+<h6 id="locate-files-by-their-access-time--------find-home--atime-30-more-than-30-days">locate files by their access time      :- <code>find $HOME -atime +30 (more than 30 days)</code></h6>
+<h6 id="similar-case-insensitive-and-ogg-ext---find-home--iname-ogg--atime-30">similar, case-insensitive and ogg ext. :- <code>find $HOME -iname '*.ogg' -atime +30</code></h6>
+<h6 id="not-greater-than-20-mb-------------------find-home--iname-ogg---size-20m">not greater than 20 mb                 :- <code>find $HOME -iname '*.ogg' ! -size +20M</code></h6>
+<h6 id="ogg-or-mp3-files-------------------------find-home--iname-ogg--o--iname-mp3">ogg or mp3 files                       :- <code>find $HOME -iname '*.ogg' -o -iname '*.mp3'</code></h6>
+
+<h3 id="info-about-hard-disks">Info about hard disks</h3>
+<h6 id="to-check-which-drives-system-can-see-----sudo-fdisk--l">to check which drives system can see   :- <code>sudo fdisk -l</code></h6>
+<h6 id="all-info-about-disks---------------------sudo-lsblk--o-namefstypesizemountpointlabel">all info about disks                   :- <code>sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL</code></h6>
+
+<h3 id="bash-rc-method">Bash rc method</h3>
+<h6 id="open-with-gedit--------------------------gedit-bashrc">open with gedit                        :- <code>gedit ~/.bashrc</code></h6>
+<h6 id="to-activate-modified-bashrc--------------source-bashrc--or-bash">to activate modified bashrc            :- <code>source ~/.bashrc  (or) bash</code></h6>
+
+<h3 id="cp---copy-mv---move">cp - copy, mv - move</h3>
+
+<h6 id="copying-a-file--------cp-locationoffile-wheretobemoved">copying a file	     :- <code>cp /location/of/file /where/to/be/moved</code></h6>
+<h6 id="copying-a-directory-----cp--r-locationoffile-wheretobemoved">copying a directory   :- <code>cp -r /location/of/file /where/to/be/moved</code></h6>
+<h6 id="moving-a-file-----------mv-locationoffile-wheretobemoved">moving a file         :- <code>mv /location/of/file /where/to/be/moved</code></h6>
+
+<h3 id="rm---remove">rm - remove</h3>
+
+<h6 id="removing-a-file---------rm-filename">removing a file	      :- <code>rm /file/name</code></h6>
+<h6 id="removing-empty-dir------rmdir-nameofdir">removing empty dir    :- <code>rmdir /name/of/dir</code></h6>
+<h6 id="removing-dir-of-files---rm--r">removing dir of files :- <code>rm -r</code></h6>
+<h6 id="make-a-directory--------mkdir-nameofdir">make a directory      :- <code>mkdir /name/of/dir</code></h6>
+
+<h3 id="cd---change-directory">cd - change directory</h3>
+
+<h6 id="home-dir----------------cd-">home dir              :- <code>cd ~</code></h6>
+<h6 id="root-dir----------------cd-">root dir              :- <code>cd /</code></h6>
+
+
+                    </div>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="/references/chapters/Linux/git/" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="/references/chapters/Linux/tmux/" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                <a href="/references/chapters/Linux/git/" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a href="/references/chapters/Linux/tmux/" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+        </nav>
+
+    </div>
+
+    <script src="/references/static/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/references/static/highlight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/references/static/book.js" type="text/javascript" charset="utf-8"></script>
+
+    <script>
+      function render_katex() {
+      $("script[type='math/tex']").replaceWith(function() {
+          var tex = $(this).text();
+          return katex.renderToString(tex, {displayMode: false});
+      });
+
+      $("script[type='math/tex; mode=display']").replaceWith(function() {
+          var tex = $(this).html();
+          return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+      });
+      };
+    </script>
+
+    </body>
+</html>

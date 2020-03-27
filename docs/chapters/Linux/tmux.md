@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tmux
+lang-ref: chapter1.0
+---
 ### TMUX
 
 #### MY CONFUGARATION
