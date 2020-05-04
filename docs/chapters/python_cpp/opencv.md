@@ -38,11 +38,24 @@ draw line :
 gaussian_blur: 
 
 blurred = cv2.GaussianBlur(image, (11, 11), 0)
-# kernel size = (11, 11)
+ kernel size = (11, 11)
 
 flip :
 
 resize :
+
+For example, this will resize both axes by half:
+```python
+small = cv2.resize(image, (0,0), fx=0.5, fy=0.5) 
+```
+
+
+and this will resize the image to have 100 cols (width) and 50 rows (height):
+```python
+resized_image = cv2.resize(image, (100, 50)) 
+```
+check out scipy's imresize also [here](https://scikit-image.org/docs/dev/api/skimage.transform.html#skimage.transform.resize)
+
 
 rotate patricular angle:
 
