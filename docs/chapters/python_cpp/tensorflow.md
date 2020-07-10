@@ -5,22 +5,28 @@ lang-ref: chapter1.0
 ---
 # Tensorflow 2.x
 
-## To use slim in TF 2 
+### To use slim in TF 2 
 
 ```pip install git+https://github.com/adrianc-a/tf-slim.git@remove_contrib```
 ```python
 import tf_slim as slim
 ```
-## Convert whole project to tf 2.x
+### Convert whole project to tf 2.x
 
 ```tf_upgrade_v2 --intree my_project/ --outtree my_project-tf2/ --reportfile my_project-tf2/report_tf2_conversion.txt ```
+
+### Convert python file to tf 2.x
+
+```tf_upgrade_v2 --infile my_project/file.py --outfile my_project/file_tf2.py --reportfile my_project-tf2/report_tf2_conversion.txt ```
+
 
 ## Disable eager execution and disable TF 2 behaviour
 
 ```tf.compat.v1.disable_eager_execution()```
+
 ```tf.compat.v1.disable_v2_behavior()```
 
-# Tutorial to build an Image Classifer in Tensorflow 2.0
+## Tutorial to build an Image Classifer in Tensorflow 2.0
 
 Tensorflow uses Keras API to further remove the complexity of Tensorflow 1. 
 

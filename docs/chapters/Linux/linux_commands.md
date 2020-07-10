@@ -3,6 +3,11 @@ layout: default
 title: Linux Commands
 lang-ref: chapter1.0
 ---
+### TAR Files or folders 
+
+<https://www.cyberciti.biz/faq/how-to-tar-a-file-in-linux-using-command-line/>
+
+
 ### Save colored terminal output
 
 #### AHA
